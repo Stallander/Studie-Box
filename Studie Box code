@@ -1,0 +1,555 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+
+string antwoord;
+string keuze;
+int score=0;
+bool oefenen=true;
+std::vector<string> fouteWoordenEN;
+std::vector<string> fouteWoordenFR;
+std::vector<string> fouteWoordenNL;
+
+void buildUp31(){
+int j=0;
+string buildUp31EN[25]={"pond", "hose", "to mow", "lawn", "lawnmower", "path", "gravel", "gate", "fance", "board", "carpenter", "nail", "to water", "tap", "tool", "shed", "orchard", "greenhouse",
+"to dig", "gap", "to gather", "to weed", "to sweep", "broom", "bunch"};
+string buildUp31NL[25]={"vijver", "slang", "maaien", "gazon", "maaimachine", "pad", "grind", "hek; poort", "hek; schutting", "plank", "timmerman", "spijker", "water geven", "kraan", "gereedschap",
+"schuurtje", "boomgaard", "kas", "graven", "opening", "verzamelen", "wieden", "vegen", "bezem", "bos"};
+    for(int i=0;i<=24;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp31NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp31EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp31EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp31EN[i]);
+            fouteWoordenNL.push_back(buildUp31NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/25"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp32(){
+int j=0;
+string buildUp32EN[25]={"to set fire to", "to burn", "fire brigade", "fire engine", "fireman/fire fighter", "to risk", "risk", "fortunately", "by means of", "rope", "exit", "emergency",
+"to possess/to own", "possessions", "spark", "to extinguish", "bucket", "waste-paper basket", "to choke", "to flee", "to spread", "to smash", "to belong to", "belongings", "entire"};
+string buildUp32NL[25]={"in brand steken", "branden", "brandweer", "brandweerwagen", "brandweerman", "riskeren", "risico", "gelukkig", "door middel van", "touw", "uitgang", "nood", "bezitten",
+"bezittingen", "vonk", "blussen", "emmer", "prullenmand", "(ver)stikken", "vluchten", "zich verspreiden", "stukslaan", "behoren aan", "bezittingen", "gehele"};
+    for(int i=0;i<=24;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp32NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp32EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp32EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp32EN[i]);
+            fouteWoordenNL.push_back(buildUp32NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/25"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp33(){
+int j=0;
+string buildUp33EN[24]={"capital", "suburb", "local", "inhabitant", "population", "native", "ouskirts", "skyscraper", "slum", "narrow", "pavement", "row", "brick", "concrete", "to decorate",
+"opposite", "opposite", "to dislike", "alley", "to stroll", "avenue", "to inhabit", "kerb", "across"};
+string buildUp33NL[24]={"hoofdstad", "voorstad", "plaatselijk", "inwoner", "bevolking", "geboorte-", "buitenwijken", "wolkenkrabber", "achterbuurt", "smal", "trottoir", "rij", "baksteen", "beton",
+"versieren", "tegenover", "tegenovergestelde", "een hekel hebben aan", "steeg", "wandelen", "brede straat", "bewonen", "trottoirband", "aan de overkant van"};
+    for(int i=0;i<=23;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp33NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp33EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp33EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp33EN[i]);
+            fouteWoordenNL.push_back(buildUp33NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/24"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp34(){
+int j=0;
+string buildUp34EN[24]={"nursery school", "primary school", "secondary school", "comprehensive (school)", "college", "boarding-school", "lesson", "timetable", "subject", "career", "to draw",
+"drawing", "break", "science", "scientist", "famous", "research", "to educate", "education", "form", "kindergarten", "to graduate", "to innovate", "innovation"};
+string buildUp34NL[24]={"kleuterschool", "basisschool", "voortgezet onderwijs", "scholengemeenschap", "hoger onderwijs", "kostschool", "les", "rooster", "vak", "loopbaan; carrière", "tekenen",
+"tekening", "pauze", "wetenschap", "geleerde", "beroemd", "onderzoek", "opleiden", "opleiding", "klas", "kleuterschool", "afstuderen", "vernieuwen", "vernieuwing"};
+    for(int i=0;i<=23;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp34NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp34EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp34EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp34EN[i]);
+            fouteWoordenNL.push_back(buildUp34NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/24"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp35(){
+int j=0;
+string buildUp35EN[29]={"grammar school", "head(master)", "compulsory", "optional subject", "physical education (PE)", "gymnasium", "to attend", "to allow", "permission", "careers teacher", "grant",
+"clever", "to repeat", "good at", "to decide", "decision", "test", "to do homework", "a turn", "boring", "principal", "public school", "attendance", "to permit", "to apply to", "to grant", "period",
+"bright", "curriculum"};
+string buildUp35NL[29]={"gymnasium", "hoofd (van school)", "verplicht", "keuzevak", "gymnastiek", "gymnastiekzaal", "bijwonen", "toestaan", "toestemming", "decaan", "studietoelage", "knap(1)",
+"blijven zitten", "goed in", "besluiten", "besluit", "toets; proefwerk", "huiswerk maken", "een beurt", "saai", "directeur", "(dure) kostschool", "aanwezigheid", "toestemming geven",
+"zich wenden tot", "verlenen", "lesuur", "knap(2)", "leerplan/studieprogramma"};
+    for(int i=0;i<=28;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp35NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp35EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp35EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp35EN[i]);
+            fouteWoordenNL.push_back(buildUp35NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/29"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp36(){
+int j=0;
+string buildUp36EN[32]={"diary", "diary", "exercise", "nickname", "easy", "difficult", "task", "to pay attention", "instruction", "clear", "to explain", "explanation", "noise", "noisy", "to disturb",
+"knowledge", "absent", "absence", "stern", "native language", "foreign", "foreigner", "few", "some/a few", "to choose", "choice", "strict", "smart", "to instruct", "obvious/apparent", "dull",
+"to overlook"};
+string buildUp36NL[32]={"agenda", "dagboek", "oefening", "bijnaam", "gemakkelijk", "moeilijk", "taak", "opletten", "instructie", "duidelijk", "uitleggen", "uitleg", "lawaai", "rumoerig", "storen",
+"kennis", "afwezig", "afwezigheid", "streng", "moedertaal", "buitenlands", "buitenlander", "weinig", "enkele; een paar", "kiezen", "keuze", "streng", "pienter", "leren", "duidelijk", "saai",
+"over het hoofd zien"};
+    for(int i=0;i<=31;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp36NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp36EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp36EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp36EN[i]);
+            fouteWoordenNL.push_back(buildUp36NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/32"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp37(){
+int j=0;
+string buildUp37EN[25]={"ruler", "chalk", "desk", "to answer/reply", "answer/reply", "stupid", "to refer to", "to bother", "memory", "meaning", "to whisper", "dust", "object", "notice", "lecture",
+"progress", "apart from", "dumb", "altogether", "to account for", "poor", "rapid", "satchel", "scholar", "survey"};
+string buildUp37NL[25]={"liniaal", "krijt", "schrijftafel", "antwoorden", "antwoord", "stom(1)", "verwijzen naar", "lastig vallen", "geheugen", "betekenis", "fluisteren", "stof", "voorwerp",
+"mededeling", "lezing", "vorderingen", "afgezien van", "stom(2)", "helemaal", "verklaren", "slecht", "snel", "schooltas", "geleerde", "overzicht"};
+    for(int i=0;i<=24;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp37NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp37EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp37EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp37EN[i]);
+            fouteWoordenNL.push_back(buildUp37NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/25"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp38(){
+int j=0;
+string buildUp38EN[28]={"report", "term", "final exam", "to fail", "to pass", "certificate", "mark", "pass", "fail", "average", "to expect", "expectation", "actually", "rather/pretty", "unless",
+"to satisfy", "satisfactory", "course", "to complete", "written exam", "oral exam", "anything but", "delight/joy", "delighted", "delightful", "satisfaction", "fairly", "apparently/obviously"};
+string buildUp38NL[28]={"rapport", "trimester", "eindexamen", "zakken voor", "slagen voor", "diploma", "cijfer", "voldoende", "onvoldoende", "gemiddeld", "verwachten", "werwachtig", "eigenlijk",
+"nogal; vrij", "tenzij" "tevreden stellen", "bevredigend", "cursus", "afmaken", "schriftelijk examen", "mondeling examen", "allesbehalve", "vreugde", "erg blij", "heerlijk", "tevredenheid",
+"vrij; nogal", "blijkbaar"};
+    for(int i=0;i<=27;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp38NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp38EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp38EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp38EN[i]);
+            fouteWoordenNL.push_back(buildUp38NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/28"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp39(){
+int j=0;
+string buildUp39EN[27]={"novel", "novelist", "dictionary", "to lend", "to publish", "to borrow", "chapter", "library", "character", "fascinating", "fairy tale", "to exist", "comic (strip)", "copy",
+"poet", "to be about", "poem", "several", "to be fed up with something", "fairy", "the existence", "fiction", "to deal with", "review", "pile", "volume"};
+string buildUp39NL[27]={"roman", "romanschrijver", "woordenboek", "lenen (aan)", "uitgeven (boek)", "lenen (van)", "hoofdstuk", "bibliotheek", "figuur", "boeiend", "sprookje", "bestaan",
+"stripverhaal", "exemplaar", "dichter", "gaan over", "gedicht", "verschillende", "iets zat zijn", "fee", "het bestaan", "verzinsel", "behandelen", "recensie", "stapel", "(boek)deel"};
+    for(int i=0;i<=26;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp39NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp39EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp39EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp39EN[i]);
+            fouteWoordenNL.push_back(buildUp39NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/27"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void buildUp40(){
+int j=0;
+string buildUp40EN[27]={"subject", "to pronounce", "pronunciation", "sentence", "to sound", "syllable", "proverb", "to interrupt", "interruption", "remark", "to remark", "chairman", "fluent",
+"to chat", "interpreter", "slang", "emphasis/stress", "to emphasize/to stress", "vocabulary", "audible", "to exclaim", "plain", "odd/queer", "account", "to quote", "bilingual"};
+string buildUp40NL[27]={"onderwerp", "uitspreken", "uitspraak", "zin", "klinken", "lettergreep", "spreekwoord", "onderbreken", "onderbreking", "opmerking", "opmerken", "voorzitter", "vloeiend",
+"kletsen", "tolk", "jargon", "klemtoon; nadruk", "beklemtonen; benadrukken", "woordenschat", "hoorbaar", "uitroepen", "uitroep", "duidelijk", "vreemd", "verslag", "citeren; aanhalen", "tweetalig"};
+    for(int i=0;i<=26;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << buildUp40NL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==buildUp40EN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<buildUp40EN[i]<<"'."<< endl;
+            fouteWoordenEN.push_back(buildUp40EN[i]);
+            fouteWoordenNL.push_back(buildUp40NL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/27"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenEN[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenEN[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+void Ch3A(){
+int j=0;
+string Ch3AFR[20]={"le spectale", "assister á", "chanter", "la chanson", "la voix", "l'origine", "la nouvelle", "toute l'année", "dernier, dernière", "pas mal", "tu as vu", "tu connais",
+"la rencontre", "comment", "trop (de)", "trouver", "oublier", "donner", "remplir", "allô"};
+string Ch3ANL[20]={"de voorstelling", "bijwonen", "zingen", "het liedje", "de stem", "de oorsprong", "het nieuwtje", "het hele jaar", "laatste, vorige", "niet slecht", "jij hebt gezien", "jij kent",
+"de ontmoeting", "hoe", "te, te veel", "vinden", "vergeten", "geven", "invullen", "hallo(aan de telefoon)"};
+    for(int i=0;i<=19;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << Ch3ANL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==Ch3AFR[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<Ch3AFR[i]<<"'."<< endl;
+            fouteWoordenFR.push_back(Ch3AFR[i]);
+            fouteWoordenNL.push_back(Ch3ANL[i]);
+            j++;
+        }
+    }
+cout<<"Je score is "<<score<<"/27"<<endl;
+cout<<"Wil je de woorden die je fout had nog een keer oefenen?('ja' of 'nee')"<<endl;
+cin >> keuze;
+if(keuze=="ja"){
+    score=0;
+    for(int i=0;i<j;i++){
+        cout << "Vertaal het volgende woord correct naar het Engels:" << endl;
+        cout << fouteWoordenNL[i] << endl;
+        std::getline(cin,antwoord);
+        if(i==0)
+            std::getline(cin,antwoord);
+        if(antwoord==fouteWoordenFR[i]){
+            cout<<"Goed"<<endl;
+            score++;
+        }else{
+            cout<<"Fout, het moest zijn '"<<fouteWoordenFR[i]<<"'."<< endl;
+        }
+    }
+cout<<"Van de woorden die je eerst fout had heb je er nu "<<score<<" van de "<<j<<" goed."<<endl;
+}
+else
+    return;
+}
+int main(){
+    while(oefenen==true){
+    cout<<"Study Box release versie 1.0."<<endl;
+    cout<<"Welke woordenlijst wil je leren?"<<endl;
+    cout<<"Beschikbare BuildUp's:"<<endl;
+    cout<<"'BU31', 'BU32', 'BU33', 'BU34', 'BU35', 'BU36', 'BU37', 'BU38', 'BU39', 'BU40'"<<endl;
+    cout<<"Beschikare Franse woordenlijsten:"<<endl;
+    cout<<"'Ch3A'(Chapitre 3 lijst A)"<<endl;
+    cout<<"Om te stoppen, typ dan in 'exit', of klik op het kruisje rechts bovenin."<<endl;
+    cout<<"Voor bugs kun je altijd contact opnemen per mail(22450@student.csgpm.nl) of via WhatsApp."<<endl;
+    cin>>keuze;
+    if(keuze=="BU31"||keuze=="bu31")
+        buildUp31();
+    if(keuze=="BU32"||keuze=="bu32")
+        buildUp32();
+    if(keuze=="BU33"||keuze=="bu33")
+        buildUp33();
+    if(keuze=="BU34"||keuze=="bu34")
+        buildUp34();
+    if(keuze=="BU35"||keuze=="bu35")
+        buildUp35();
+    if(keuze=="BU36"||keuze=="bu36")
+        buildUp36();
+    if(keuze=="BU37"||keuze=="bu37")
+        buildUp37();
+    if(keuze=="BU38"||keuze=="bu38")
+        buildUp38();
+    if(keuze=="BU39"||keuze=="bu39")
+        buildUp39();
+    if(keuze=="BU40"||keuze=="bu40")
+        buildUp40();
+    if(keuze=="Ch3A"||keuze=="CH3A"||keuze=="Ch3a"||keuze=="CH3a"||keuze=="ch3a")
+        Ch3A();
+    if(keuze=="exit")
+        oefenen=false;
+    else
+        cout << "Ongeldige keuze" << endl;
+    }
+    return 0;
+}
